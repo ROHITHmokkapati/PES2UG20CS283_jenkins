@@ -4,24 +4,15 @@ pipeline {
     stage('Build') {
       steps {
         sh 'g++ main/output.cpp -o output'
-        build 'PES2UG20CS283-1'
-        echo 'Build Successful'
       }
     }
     stage('Test') {
       steps {
         sh './output'
-        echo 'Testing Successful'
       }
     }
-    stage('Deploy') {
-      when {
-        expression {
-          currentBuild.result == null || currentBuild.result == 'SUCCESS' 
-        }
-      }
+    stage('deploy') {
       steps {
-        echo 'Deployment Successful'
       }
     }
   }
