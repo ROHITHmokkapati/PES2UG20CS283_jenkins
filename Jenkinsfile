@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'g++ rand.cpp -o rand'
+        sh 'g++ main/rand.cpp -o rand'
         echo 'built'
       }
     }
