@@ -4,14 +4,14 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'g++ main/rand.cpp -o rand'
+        sh 'g++ rand.cpp -o rand'
         echo 'built'
       }
     }
     
     stage('Test') {
       steps {
-        sh './rand'
+        sh '/var/jenkins_home/workspace/PES2UG20CS283/rand'
         echo 'test!!'
       }
     }
