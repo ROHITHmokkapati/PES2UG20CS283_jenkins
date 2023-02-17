@@ -4,13 +4,15 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'g++ new.cpp -o new'
+        sh 'g++ rand.cpp -o rand'
+        echo 'built'
       }
     }
     
     stage('Test') {
       steps {
-        sh './new'
+        sh './rand'
+        echo 'test!!'
       }
     }
     
