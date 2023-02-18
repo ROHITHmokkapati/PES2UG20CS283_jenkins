@@ -11,7 +11,7 @@ pipeline {
     
     stage('Test') {
       steps {
-        sh '/var/jenkins_home/workspace/PES2UG20CS283/rand'
+        sh '/var/jenkins_home/workspace/PES2UG20CS283/ran'
         echo 'test!!'
       }
     }
